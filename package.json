@@ -1,0 +1,24 @@
+{
+  "name": "electron-soundmachine",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gordon2012/electron-soundmachine.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gordon2012/electron-soundmachine/issues"
+  },
+  "homepage": "https://github.com/gordon2012/electron-soundmachine#readme",
+  "devDependencies": {
+    "electron-prebuilt": "^1.4.13"
+  }
+}
