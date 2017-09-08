@@ -20,5 +20,9 @@
   "homepage": "https://github.com/gordon2012/electron-soundmachine#readme",
   "devDependencies": {
     "electron-prebuilt": "^1.4.13"
+  },
+  "dependencies": {
+    "electron-is-dev": "^0.3.0",
+    "electron-reload": "^1.2.1"
   }
 }
