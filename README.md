@@ -1,5 +1,8 @@
 # Electron Soundmachine
 
-An Electron tutorial
+## Building a Desktop Application with Electron
 
-[Building a Desktop Application with Electron](https://medium.com/developers-writing/building-a-desktop-application-with-electron-204203eeb658)
+### An Electron tutorial
+
+- [Tutorial](https://medium.com/developers-writing/building-a-desktop-application-with-electron-204203eeb658)
+- [Repository](https://github.com/bojzi/sound-machine-electron-guide)
