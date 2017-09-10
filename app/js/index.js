@@ -38,9 +38,10 @@ settingsEl.addEventListener('click', function () {
     ipc.send('open-settings-window');
 });
 
-ipc.on('global-shortcut', function (arg) {
+ipc.on('global-shortcut', function (evt, msg) {
+    console.log(msg);
     var event = new MouseEvent('click');
-    soundButtons[arg].dispatchEvent(event);
+    soundButtons[msg].dispatchEvent(event);
 });
 
 if (process.platform === 'darwin') {

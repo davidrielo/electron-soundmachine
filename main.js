@@ -1,7 +1,7 @@
 'use strict';
 
 const electron = require('electron');
-const { app, BrowserWindow, ipcMain: ipc } = electron;
+const { app, BrowserWindow, ipcMain: ipc, globalShortcut } = electron;
 const reload = require('electron-reload');
 const isDev = require('electron-is-dev');
 
@@ -23,6 +23,13 @@ app.on('ready', function() {
     });
 
     mainWindow.loadURL('file://' + __dirname + '/app/index.html');
+
+    globalShortcut.register('CommandOrControl+shift+1', () => {
+        mainWindow.webContents.send('global-shortcut', 0);
+    });
+    globalShortcut.register('CommandOrControl+shift+2', () => {
+        mainWindow.webContents.send('global-shortcut', 1);
+    });
 });
 
 ipc.on('close-main-window', () => {
