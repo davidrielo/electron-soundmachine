@@ -1,13 +1,13 @@
 'use strict';
 
-var electron = require('electron');
-var app = electron.app;
-var BrowserWindow = electron.BrowserWindow;
-var mainWindow = null;
+const electron = require('electron');
+const { app, BrowserWindow, ipcMain: ipc } = electron;
+const reload = require('electron-reload');
+const isDev = require('electron-is-dev');
 
-var path = require('path');
-var reload = require('electron-reload');
-var isDev = require('electron-is-dev');
+const path = require('path');
+
+let mainWindow = null;
 
 if(isDev) {
     const electronPath = path.join(__dirname, 'node_modules', '.bin', 'electron');
@@ -23,4 +23,8 @@ app.on('ready', function() {
     });
 
     mainWindow.loadURL('file://' + __dirname + '/app/index.html');
+});
+
+ipc.on('close-main-window', () => {
+    app.quit();
 });
